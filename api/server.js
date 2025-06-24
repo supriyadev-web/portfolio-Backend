@@ -9,7 +9,11 @@ import Skill from "../models/Skill.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+// ✅ FIXED: CORS set to allow your frontend
+app.use(cors({
+    origin: "https://portfolio-frontend-pi-jade.vercel.app/" // Replace with your frontend URL
+}));
+  
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL)
