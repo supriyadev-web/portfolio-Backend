@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 // ✅ FIXED: CORS set to allow your frontend
 app.use(cors({
-    origin: "https://portfolio-frontend-pi-jade.vercel.app/" // Replace with your frontend URL
+    origin: "https://portfolio-frontend-pi-jade.vercel.app" // Replace with your frontend URL
 }));
   
 app.use(express.json());
